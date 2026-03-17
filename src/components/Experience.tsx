@@ -2,6 +2,16 @@ import { Briefcase, GraduationCap, Award, Code } from 'lucide-react';
 import { motion } from 'motion/react';
 import { ScrollReveal } from './ScrollReveal';
 import { TiltCard } from './TiltCard';
+import gimsLogo from '../assets/gims-logo.jpg';
+
+type ExperienceItem = {
+  title: string;
+  company: string;
+  period: string;
+  description: string;
+  achievements: string[];
+  logo?: string;
+};
 
 export function Experience() {
   const education = [
@@ -13,16 +23,19 @@ export function Experience() {
     },
   ];
 
-  const experience = [
+  const experience: ExperienceItem[] = [
     {
-      title: 'Flutter Developer Intern',
-      company: 'Aliter Buisness Solution',
-      period: 'Summer 2024',
-      description: 'Redesigned Flutter mobile app interface, conducted user research with 50+ participants, and created a comprehensive design system.',
+      title: 'Full Time Intern',
+      company: 'Centre For Medical Innovation, GIMS Greater Noida',
+      period: 'Current',
+      description: 'A section 8 company of GIMS foundation under Government of Uttar Pradesh.',
       achievements: [
-        'Improved user engagement by 35%',
-        'Designed 10+ screens and components',
+        'Coordinated incubation for 10+ health-tech startups, boosting team communication by 30%.',
+        'Designed creatives for events, increasing audience engagement by 25%.',
+        'Evaluated emerging healthcare tech including SaMD and IoMT solutions.',
+        'Facilitated multi-stakeholder interactions with strong leadership and collaboration.'
       ],
+      logo: gimsLogo,
     },
     {
       title: 'Web Developer Intern',
@@ -32,6 +45,16 @@ export function Experience() {
       achievements: [
         'Completed 5+ client projects',
         'Built long-term relationships with 5 recurring clients',
+      ],
+    },
+    {
+      title: 'Flutter Developer intern',
+      company: 'Aliter Buisness Solution',
+      period: 'Summer 2024',
+      description: 'Redesigned Flutter mobile app interface, conducted user research with 50+ participants, and created a comprehensive design system.',
+      achievements: [
+        'Improved user engagement by 35%',
+        'Designed 10+ screens and components',
       ],
     },
 
@@ -143,16 +166,36 @@ export function Experience() {
 
             {experience.map((exp, index) => (
               <ScrollReveal key={index} delay={0.1 + index * 0.1}>
-                <TiltCard className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300 cursor-pointer">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                    <div>
-                      <h4 className="text-xl mb-1">{exp.title}</h4>
-                      <p className="text-white/70">{exp.company}</p>
-                    </div>
-                    <span className="text-[#A8F5FF] text-sm mt-2 md:mt-0">{exp.period}</span>
+                <TiltCard className="relative bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300 cursor-pointer">
+                  {/* Top Header - Status Badge */}
+                  <div 
+                    className="absolute z-20 pointer-events-none" 
+                    style={{ right: '2rem', top: '2rem' }}
+                  >
+                     <span className="text-[#A8F5FF] text-sm px-3 py-1 bg-[#A8F5FF]/10 rounded-full inline-block backdrop-blur-sm shadow-sm border border-[#A8F5FF]/20">
+                        {exp.period}
+                     </span>
                   </div>
                   
-                  <p className="text-white/60 mb-4">{exp.description}</p>
+                  <div className="flex flex-col md:flex-row gap-6 mb-4">
+                    {/* Logo Section */}
+                    {exp.logo && (
+                      <div className="w-full md:w-64 bg-white rounded-lg flex items-center justify-center p-2 shrink-0 overflow-hidden shadow-md h-fit">
+                        <img src={exp.logo} alt={exp.company} className="w-full h-auto object-contain" />
+                      </div>
+                    )}
+                    
+                    {/* Title and Description Section */}
+                    <div className="flex-1 space-y-3 pt-2 md:pt-0">
+                      <div>
+                        <h4 className="text-xl md:text-2xl font-semibold text-white mb-1">{exp.title}</h4>
+                        <p className="text-white/70 text-base md:text-lg">{exp.company}</p>
+                      </div>
+                      <p className="text-white/70 text-sm md:text-base leading-relaxed border-l-2 border-[#D4FF00]/50 pl-4 py-1">
+                        {exp.description}
+                      </p>
+                    </div>
+                  </div>
                   
                   <div className="space-y-2">
                     <p className="text-sm text-white/50">Key Achievements:</p>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreyansh Dixit — SQA Engineer | I Find What Breaks</title>
+    <meta name="description" content="Portfolio of Shreyansh Dixit, Software Quality Assurance Engineer. I validate systems, hunt defects, and think in edge cases.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='none' stroke='%2300C896' stroke-width='8'/><path d='M30 52 L45 67 L72 37' fill='none' stroke='%2300C896' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+
+
+    <!-- Boot Overlay -->
+    <div id="boot-overlay" class="boot-overlay">
+        <div id="boot-lines" class="boot-lines">
+            <div class="boot-line" data-status="DONE">INITIALIZING PORTFOLIO_v2.0 .............. [DONE]</div>
+            <div class="boot-line" data-status="DONE">LOADING CANDIDATE PROFILE ............... [DONE]</div>
+            <div class="boot-line" data-status="PASS">RUNNING INTEGRITY CHECK ................. [PASS]</div>
+            <div class="boot-line" data-status="PASS">VALIDATING SKILL SET .................... [PASS]</div>
+            <div class="boot-line" data-status="FOUND">CHECKING FOR EDGE CASES ................. [FOUND: 47]</div>
+            <div class="boot-line" data-status="CLEAN">DEFECT LOG CLEARED ...................... [CLEAN]</div>
+            <div class="boot-line" data-status="OK">SYSTEM READY ............................ [OK]</div>
+        </div>
+        <button id="boot-skip" class="boot-skip">[ SKIP BOOT ]</button>
+    </div>
+
+    <!-- Main Content (hidden during boot) -->
+    <div id="main-content" class="main-content">
+
+        <!-- Navigation -->
+        <nav id="main-nav" class="main-nav">
+            <a class="nav-logo" href="#hero">SHREYANSH_DIXIT // SQA</a>
+            <div class="nav-links">
+                <a class="nav-link" href="#hero">SYSTEM</a>
+                <a class="nav-link" href="#thinking">APPROACH</a>
+                <a class="nav-link" href="#skills">COVERAGE</a>
+                <a class="nav-link" href="#experience">AUDIT TRAIL</a>
+                <a class="nav-link" href="#projects">TICKETS</a>
+                <a class="nav-link" href="#edge-cases">EDGE CASES</a>
+                <a class="nav-link" href="#contact">FILE REPORT</a>
+            </div>
+        </nav>
+
+        <!-- ============================================ -->
+        <!-- SECTION 1: HERO -->
+        <!-- ============================================ -->
+        <section id="hero" class="section hero-section">
+            <div class="hero-bg-table">
+                <div class="tc-row" data-result="PASS">TC_001 | Verify login flow with empty email | CRITICAL | PASS</div>
+                <div class="tc-row" data-result="FAIL">TC_002 | Test checkout on 2G network throttle | HIGH | FAIL</div>
+                <div class="tc-row" data-result="PASS">TC_003 | Validate API response on 500ms delay | MEDIUM | PASS</div>
+            </div>
+
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1 class="hero-headline">I find what breaks<br>before your users do.</h1>
+
+                    <p class="hero-sub">Shreyansh Dixit — SQA Engineer.<br>I validate systems, hunt defects, and think in edge cases.</p>
+
+                    <div class="status-bar">
+                        <span class="status-pill" data-type="status">STATUS: OPEN TO WORK</span>
+                        <span class="status-pill" data-type="severity">SEVERITY: P0 URGENT</span>
+                        <span class="status-pill" data-type="environment">LOCATION: DELHI-NCR / PAN-INDIA (Remote / Relocation)</span>
+                    </div>
+
+                    <div class="cta-row">
+                        <a class="cta-btn cta-primary" href="#projects">RUN TEST →</a>
+                        <a class="cta-btn cta-secondary" href="#contact">FILE BUG REPORT</a>
+                    </div>
+                </div>
+
+                <div class="hero-profile">
+                    <div class="profile-frame">
+                        <div class="frame-corner top-left"></div>
+                        <div class="frame-corner top-right"></div>
+                        <div class="frame-corner bottom-left"></div>
+                        <div class="frame-corner bottom-right"></div>
+                        <img src="profile.jpg" alt="Shreyansh Dixit" class="profile-img">
+                        <div class="profile-scanlines"></div>
+                        <div class="profile-tag">[INSPECT_TARGET: SHREYANSH_DIXIT]</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- SECTION 2: THINKING MODEL -->
+        <!-- ============================================ -->
+        <section id="thinking" class="section thinking-section">
+            <h2 class="section-title">HOW I APPROACH ANY SYSTEM</h2>
+
+            <div class="flowchart">
+                <!-- Row 1: Requirement Received -->
+                <div class="flow-node" style="grid-row: 1; grid-column: 2;" data-tooltip="Every project starts here. The requirement is the foundation — if it's flawed, everything downstream inherits the defect.">REQUIREMENT RECEIVED</div>
+
+                <!-- Row 2: Connector -->
+                <div class="flow-connector" style="grid-row: 2; grid-column: 2;"></div>
+
+                <!-- Row 3: Requirement Analysis -->
+                <div class="flow-node" style="grid-row: 3; grid-column: 2;" data-tooltip="I don't just read requirements — I interrogate them. What's missing? What's ambiguous? What's assumed?">REQUIREMENT ANALYSIS</div>
+
+                <!-- Row 4: Connector -->
+                <div class="flow-connector" style="grid-row: 4; grid-column: 2;"></div>
+
+                <!-- Row 5: Decision Node & Branch NO -->
+                <div class="flow-node flow-decision" style="grid-row: 5; grid-column: 2;" data-tooltip="This is the most important gate. Unclear requirements are the #1 source of production defects.">Is it clear?</div>
+                <div class="flow-side-right" style="grid-row: 5; grid-column: 3;">
+                    <span class="flow-branch-label flow-branch-no">NO</span>
+                    <div class="flow-connector-h"></div>
+                    <div class="flow-node flow-fail" data-tooltip="At CMI, I pushed back on vague workflow specs from 3 startups because untested assumptions become production bugs.">Flag ambiguity. Raise query.</div>
+                </div>
+
+                <!-- Row 6: YES Connector -->
+                <div class="flow-connector-label" style="grid-row: 6; grid-column: 2;">
+                    <span class="flow-branch-label">YES</span>
+                    <div class="flow-connector"></div>
+                </div>
+
+                <!-- Row 7: Test Case Design -->
+                <div class="flow-node" style="grid-row: 7; grid-column: 2;" data-tooltip="Happy path + Edge cases + Negative cases. I design tests that cover what should work, what shouldn't, and what definitely won't.">TEST CASE DESIGN</div>
+
+                <!-- Row 8: Connector -->
+                <div class="flow-connector" style="grid-row: 8; grid-column: 2;"></div>
+
+                <!-- Row 9: Execution -->
+                <div class="flow-node" style="grid-row: 9; grid-column: 2;" data-tooltip="Systematic execution across functional, integration, and regression scenarios.">EXECUTION</div>
+
+                <!-- Row 10: PASS & FAIL Branches -->
+                <div class="flow-side-left" style="grid-row: 10; grid-column: 1;">
+                    <div class="flow-node flow-pass" data-tooltip="Clean execution. Document findings, update traceability matrix, sign off.">Document &amp; Sign Off</div>
+                    <div class="flow-connector-h"></div>
+                    <span class="flow-branch-label">PASS</span>
+                </div>
+                <div class="flow-connector" style="grid-row: 10; grid-column: 2;"></div>
+                <div class="flow-side-right" style="grid-row: 10; grid-column: 3;">
+                    <span class="flow-branch-label flow-branch-no">FAIL</span>
+                    <div class="flow-connector-h"></div>
+                    <div class="flow-node flow-fail" data-tooltip="In LoomFlow CRM, I identified API response inconsistencies on concurrent module loads — a case the happy path never catches.">Defect Report → Severity Assignment → Retest</div>
+                </div>
+
+                <!-- Row 11: Connector -->
+                <div class="flow-connector" style="grid-row: 11; grid-column: 2;"></div>
+
+                <!-- Row 12: Regression Check -->
+                <div class="flow-node" style="grid-row: 12; grid-column: 2;" data-tooltip="Every fix is a potential new defect. Regression testing ensures the cure isn't worse than the disease.">REGRESSION CHECK</div>
+
+                <!-- Row 13: Connector -->
+                <div class="flow-connector" style="grid-row: 13; grid-column: 2;"></div>
+
+                <!-- Row 14: System Approved -->
+                <div class="flow-node flow-pass" style="grid-row: 14; grid-column: 2;" data-tooltip="System validated end-to-end. All critical paths verified. Zero open P0/P1 defects.">SYSTEM APPROVED ✓</div>
+            </div>
+
+            <!-- Tooltip Display Panel -->
+            <div id="flow-tooltip-panel" class="flow-tooltip-panel"></div>
+
+            <p class="thinking-quote">"Most people test what should work. I test what shouldn't — and then I test what definitely won't. That's where the real defects live."</p>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- SECTION 3: SKILLS -->
+        <!-- ============================================ -->
+        <section id="skills" class="section skills-section">
+            <h2 class="section-title">COVERAGE REPORT — SKILL MATRIX</h2>
+
+            <div class="skills-table">
+                <!-- Header Row -->
+                <div class="skills-row skills-header">
+                    <div class="skills-col skills-area">SKILL AREA</div>
+                    <div class="skills-col skills-list">SKILLS</div>
+                    <div class="skills-col skills-coverage">TEST COVERAGE</div>
+                    <div class="skills-col skills-confidence">CONFIDENCE</div>
+                </div>
+
+                <!-- Row 1: QA & Testing -->
+                <div class="skills-row" data-animate="true">
+                    <div class="skills-col skills-area">QA &amp; Testing</div>
+                    <div class="skills-col skills-list">Functional Testing, Test Case Design, Defect Analysis, Requirement Validation, SDLC, STLC</div>
+                    <div class="skills-col skills-coverage">
+                        <div class="progress-bar"><div class="progress-fill" data-width="80" style="width:0%"></div></div>
+                    </div>
+                    <div class="skills-col skills-confidence">HIGH</div>
+                </div>
+
+                <!-- Row 2: Programming -->
+                <div class="skills-row" data-animate="true">
+                    <div class="skills-col skills-area">Programming</div>
+                    <div class="skills-col skills-list">Java, SQL, HTML, CSS</div>
+                    <div class="skills-col skills-coverage">
+                        <div class="progress-bar"><div class="progress-fill" data-width="60" style="width:0%"></div></div>
+                    </div>
+                    <div class="skills-col skills-confidence">MEDIUM-HIGH</div>
+                </div>
+
+                <!-- Row 3: Tools -->
+                <div class="skills-row" data-animate="true">
+                    <div class="skills-col skills-area">Tools</div>
+                    <div class="skills-col skills-list">Git, GitHub, MySQL, Figma, AWS (basic), APIs</div>
+                    <div class="skills-col skills-coverage">
+                        <div class="progress-bar"><div class="progress-fill" data-width="70" style="width:0%"></div></div>
+                    </div>
+                    <div class="skills-col skills-confidence">HIGH</div>
+                </div>
+
+                <!-- Row 4: CS Fundamentals -->
+                <div class="skills-row" data-animate="true">
+                    <div class="skills-col skills-area">CS Fundamentals</div>
+                    <div class="skills-col skills-list">DBMS, OS, Computer Networks, OOPs</div>
+                    <div class="skills-col skills-coverage">
+                        <div class="progress-bar"><div class="progress-fill" data-width="80" style="width:0%"></div></div>
+                    </div>
+                    <div class="skills-col skills-confidence">HIGH</div>
+                </div>
+
+                <!-- Row 5: Soft Skills -->
+                <div class="skills-row" data-animate="true">
+                    <div class="skills-col skills-area">Soft Skills</div>
+                    <div class="skills-col skills-list">Analytical Thinking, Attention to Detail, Cross-Team Communication, Problem Solving</div>
+                    <div class="skills-col skills-coverage">
+                        <div class="progress-bar"><div class="progress-fill" data-width="90" style="width:0%"></div></div>
+                    </div>
+                    <div class="skills-col skills-confidence">VERY HIGH</div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ============================================ -->
+        <!-- SECTION 4: EXPERIENCE -->
+        <!-- ============================================ -->
+        <section id="experience" class="section experience-section">
+            <h2 class="section-title">AUDIT TRAIL — FIELD EXPERIENCE</h2>
+
+            <!-- Entry 01: CMI -->
+            <div class="audit-card" data-animate="true">
+                <div class="audit-field"><span class="audit-label">[ORG]</span><span class="audit-value">Centre for Medical Innovation (GIMS), On-Site, Greater Noida</span></div>
+                <div class="audit-field"><span class="audit-label">[ROLE]</span><span class="audit-value">Incubation Trainee</span></div>
+                <div class="audit-field"><span class="audit-label">[PERIOD]</span><span class="audit-value">Feb 2026 — Apr 2026</span></div>
+                <div class="audit-field"><span class="audit-label">[STATUS]</span><span class="audit-value"><span class="audit-status status-complete">✓ COMPLETED</span></span></div>
+
+                <ul class="audit-findings">
+                    <li>→ Analyzed workflows of 10+ health-tech startups</li>
+                    <li>→ Identified bottlenecks, communication gaps, and process inconsistencies</li>
+                    <li>→ Designed tracking systems → operational visibility improved ~30%</li>
+                    <li>→ Validated stakeholder requirements against defined deliverables</li>
+                    <li>→ Evaluated SaMD &amp; IoMT product workflows for edge-case coverage</li>
+                </ul>
+
+                <blockquote class="qa-insight">"Real-world processes fail at the handoff points — where one team assumes another team has validated something. I learned to treat every handoff as a potential defect injection point."</blockquote>
+            </div>
+
+            <!-- Entry 02: InternPE -->
+            <div class="audit-card" data-animate="true">
+                <div class="audit-field"><span class="audit-label">[ORG]</span><span class="audit-value">InternPE (Remote)</span></div>
+                <div class="audit-field"><span class="audit-label">[ROLE]</span><span class="audit-value">Web Developer Intern</span></div>
+                <div class="audit-field"><span class="audit-label">[PERIOD]</span><span class="audit-value">May 2025 — Jun 2025</span></div>
+                <div class="audit-field"><span class="audit-label">[STATUS]</span><span class="audit-value"><span class="audit-status status-complete">✓ COMPLETED</span></span></div>
+
+                <ul class="audit-findings">
+                    <li>→ Validated consistency between Figma design specs and implemented UI</li>
+                    <li>→ Detected and resolved UI inconsistencies across responsive breakpoints</li>
+                    <li>→ Operated within Git-based iterative delivery workflow</li>
+                </ul>
+
+                <blockquote class="qa-insight">"Design specs are requirements. Any gap between the spec and the build is a defect — no matter how minor it looks visually."</blockquote>
+            </div>
+
+            <!-- Entry 03: Aliter -->
+            <div class="audit-card" data-animate="true">
+                <div class="audit-field"><span class="audit-label">[ORG]</span><span class="audit-value">Aliter Business Solutions (Remote)</span></div>
+                <div class="audit-field"><span class="audit-label">[ROLE]</span><span class="audit-value">Flutter Developer Intern</span></div>
+                <div class="audit-field"><span class="audit-label">[PERIOD]</span><span class="audit-value">Jun 2024 — Jul 2024</span></div>
+                <div class="audit-field"><span class="audit-label">[STATUS]</span><span class="audit-value"><span class="audit-status status-complete">✓ COMPLETED</span></span></div>
+
+                <ul class="audit-findings">
+                    <li>→ Performed functional verification of mobile screens</li>
+                    <li>→ Tested layout consistency, interaction reliability, and edge-case behavior</li>
+                    <li>→ Identified and resolved usability defects across multiple screens pre-release</li>
+                </ul>
+
+                <blockquote class="qa-insight">"Edge cases in mobile UX often live in the interaction states that developers test last — focus states, error states, empty states. I test those first."</blockquote>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- SECTION 5: PROJECTS -->
+        <!-- ============================================ -->
+        <section id="projects" class="section projects-section">
+            <h2 class="section-title">CLOSED TICKETS — PROJECT CASE FILES</h2>
+
+            <!-- Project 01: JanAushadhi (Featured) -->
+            <div class="ticket-card ticket-featured" data-animate="true" data-p0="0" data-p1="2" data-p2="5" data-p3="8">
+                <div class="ticket-header">
+                    <div class="ticket-field"><span class="ticket-label">TICKET ID:</span><span class="ticket-value">PRJ-001</span></div>
+                    <div class="ticket-field"><span class="ticket-label">PROJECT:</span><span class="ticket-value">JanAushadhi Medicine Delivery Platform</span></div>
+                    <div class="ticket-field"><span class="ticket-label">STATUS:</span><span class="ticket-value">✓ PATENTED | ✓ CONFERENCE PAPER — ICSETI-2026, Delhi-NCR</span></div>
+                    <div class="ticket-field"><span class="ticket-label">SEVERITY:</span><span class="ticket-value">CRITICAL (healthcare system)</span></div>
+                    <div class="ticket-field"><span class="ticket-label">TECH:</span><span class="ticket-value">System Architecture, Multi-module design</span></div>
+                </div>
+
+                <div class="ticket-body">
+                    <div class="ticket-section">
+                        <h4 class="ticket-section-title">[SYSTEM UNDER TEST]</h4>
+                        <p>A multi-module delivery platform covering discovery → order → delivery for generic medicines under the Jan Aushadhi scheme.</p>
+                    </div>
+
+                    <div class="ticket-section">
+                        <h4 class="ticket-section-title">[DEFECTS IDENTIFIED DURING DESIGN]</h4>
+                        <ul>
+                            <li>→ End-to-end flow breakpoints between discovery and order modules</li>
+                            <li>→ Edge cases in delivery assignment when inventory = 0</li>
+                            <li>→ Missing validation on order state transitions</li>
+                            <li>→ Data integrity risks across loosely coupled modules</li>
+                        </ul>
+                    </div>
+
+                    <div class="ticket-section">
+                        <h4 class="ticket-section-title">[VALIDATION APPROACH]</h4>
+                        <ul>
+                            <li>→ Mapped all module-to-module touchpoints</li>
+                            <li>→ Designed flow diagrams for each user journey</li>
+                            <li>→ Evaluated edge-case scenarios at every state transition</li>
+                            <li>→ Architecture reviewed, formalized, and awarded patent</li>
+                        </ul>
+                    </div>
+
+                    <div class="ticket-section">
+                        <h4 class="ticket-section-title">[OUTCOME]</h4>
+                        <p>Architecture formally recognized. Research presented at ICSETI-2026 demonstrating ability to document, validate, and communicate system design at a professional level.</p>
+                    </div>
+
+                    <div class="ticket-section">
+                        <h4 class="ticket-section-title">[WHAT THIS PROVES]</h4>
+                        <p>Ability to think at system level — not just feature level.</p>
+                    </div>
+                </div>
+
+                <div class="severity-overlay">
+                    <span>P0: 0</span>
+                    <span>P1: 2 fixed</span>
+                    <span>P2: 5 fixed</span>
+                    <span>P3: 8 fixed</span>
+                </div>
+            </div>
+
+            <!-- Project 02: LoomFlow CRM -->
+            <div class="ticket-card" data-animate="true" data-p0="0" data-p1="3" data-p2="7" data-p3="12">
+                <div class="ticket-header">
+                    <div class="ticket-field"><span class="ticket-label">TICKET ID:</span><span class="ticket-value">PRJ-002</span></div>
+                    <div class="ticket-field"><span class="ticket-label">PROJECT:</span><span class="ticket-value">LoomFlow CRM</span></div>
+                    <div class="ticket-field"><span class="ticket-label">STATUS:</span><span class="ticket-value">✓ DELIVERED</span></div>
+                    <div class="ticket-field"><span class="ticket-label">SEVERITY:</span><span class="ticket-value">HIGH (multi-tenant, multi-role system)</span></div>
+                    <div class="ticket-field"><span class="ticket-label">TECH:</span><span class="ticket-value">Next.js, Prisma, TypeScript, AI, Twilio, REST APIs</span></div>
+                </div>
+
+                <div class="ticket-body">
+                    <div class="ticket-section">
+                        <h4 class="ticket-section-title">[SYSTEM UNDER TEST]</h4>
+                        <p>Multi-tenant Real Estate CRM with 65+ modules across 6 phases — leads, properties, attendance, reports, AI qualification, notifications.</p>
+                    </div>
+
+                    <div class="ticket-section">
+                        <h4 class="ticket-section-title">[DEFECTS IDENTIFIED &amp; RESOLVED]</h4>
+                        <ul>
+                            <li>→ TypeScript type errors causing silent data corruption in API responses</li>
+                            <li>→ Role-based access control gaps allowing unauthorized module access</li>
+                            <li>→ Cross-module data integrity failures on lead-to-property state changes</li>
+                            <li>→ UI state bugs on mobile-first layouts at specific breakpoints</li>
+                            <li>→ AI qualification logic returning incorrect lead scores on edge inputs</li>
+                            <li>→ Twilio call-bridge flow failures when webhook response exceeded timeout</li>
+                        </ul>
+                    </div>
+
+                    <div class="ticket-section">
+                        <h4 class="ticket-section-title">[VALIDATION APPROACH]</h4>
+                        <ul>
+                            <li>→ Requirement-to-implementation traceability across all 65+ modules</li>
+                            <li>→ Functional verification of AI logic against spec-defined scenarios</li>
+                            <li>→ Integration testing of Twilio + webhook pipelines</li>
+                            <li>→ Cross-module regression after each phase delivery</li>
+                        </ul>
+                    </div>
+
+                    <div class="ticket-section">
+                        <h4 class="ticket-section-title">[OUTCOME]</h4>
+                        <p>Zero critical defects at final delivery across all 6 phases. All role-based flows and integration pipelines validated end-to-end.</p>
+                    </div>
+
+                    <div class="ticket-section">
+                        <h4 class="ticket-section-title">[WHAT THIS PROVES]</h4>
+                        <p>Direct integration testing experience. Defect triage at scale. Comfort operating in complex, multi-module systems.</p>
+                    </div>
+                </div>
+
+                <div class="severity-overlay">
+                    <span>P0: 0</span>
+                    <span>P1: 3 fixed</span>
+                    <span>P2: 7 fixed</span>
+                    <span>P3: 12 fixed</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- SECTION 6: EDGE CASE WALL -->
+        <!-- ============================================ -->
+        <section id="edge-cases" class="section edge-section">
+            <h2 class="section-title">EDGE CASES I THINK ABOUT &amp; VALIDATE</h2>
+
+            <div class="edge-grid">
+                <!-- Card 1 -->
+                <div class="edge-card" data-animate="true" data-severity="P1">
+                    <p class="edge-text">What happens when the user submits a form while the network drops at exactly the POST request?</p>
+                    <span class="edge-severity severity-p1">P1 — DATA LOSS RISK</span>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="edge-card" data-animate="true" data-severity="P0">
+                    <p class="edge-text">What if two users update the same record simultaneously in a multi-tenant CRM?</p>
+                    <span class="edge-severity severity-p0">P0 — DATA CORRUPTION</span>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="edge-card" data-animate="true" data-severity="P2">
+                    <p class="edge-text">Does the UI show a loader, or does it silently fail when an API times out at 3001ms (just over the limit)?</p>
+                    <span class="edge-severity severity-p2">P2 — UX DEFECT</span>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="edge-card" data-animate="true" data-severity="P0">
+                    <p class="edge-text">What happens when a user with role: ADMIN is also assigned role: VIEWER in the same session?</p>
+                    <span class="edge-severity severity-p0">P0 — SECURITY RISK</span>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="edge-card" data-animate="true" data-severity="P2">
+                    <p class="edge-text">Does the mobile layout break when the user increases system font size to 200% in accessibility settings?</p>
+                    <span class="edge-severity severity-p2">P2 — ACCESSIBILITY DEFECT</span>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="edge-card" data-animate="true" data-severity="P1">
+                    <p class="edge-text">If a qualification API returns null instead of a score, does the system fail gracefully or crash the entire lead flow?</p>
+                    <span class="edge-severity severity-p1">P1 — INTEGRATION DEFECT</span>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="edge-card" data-animate="true" data-severity="P0">
+                    <p class="edge-text">What if someone submits a medicine order for a product with inventory = 0 but status = "available"?</p>
+                    <span class="edge-severity severity-p0">P0 — CRITICAL DATA DEFECT</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- SECTION 7: EDUCATION -->
+        <!-- ============================================ -->
+        <section id="education" class="section education-section">
+            <h2 class="section-title">SYSTEM CREDENTIALS</h2>
+
+            <div class="edu-block">
+                <h3>[EDUCATION]</h3>
+                <p><strong>B.Tech — Computer Science Engineering</strong></p>
+                <p>Sharda University, Delhi-NCR</p>
+                <p>Sep 2022 – Jun 2026 | CGPA: 7.0</p>
+            </div>
+
+            <div class="recognition-block">
+                <h3>[RECOGNITION]</h3>
+                <p>Patent Awarded — JanAushadhi Platform Architecture</p>
+                <p>Conference Presenter — ICSETI-2026, Delhi-NCR</p>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- SECTION 8: CONTACT -->
+        <!-- ============================================ -->
+        <section id="contact" class="section contact-section">
+            <h2 class="section-title">FILE A BUG REPORT (AKA: LET'S TALK)</h2>
+
+            <form id="bug-report-form" class="bug-form">
+                <div class="form-group">
+                    <label for="reporter-name">REPORTER NAME:</label>
+                    <input class="bug-input" id="reporter-name" name="name" type="text" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reporter-email">REPORTER EMAIL:</label>
+                    <input class="bug-input" id="reporter-email" name="email" type="email" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reporter-env">ENVIRONMENT:</label>
+                    <input class="bug-input" id="reporter-env" type="text" placeholder="Company / Role you're hiring for">
+                </div>
+
+                <div class="form-group">
+                    <label>SEVERITY:</label>
+                    <div class="severity-select">
+                        <label class="severity-radio">
+                            <input type="radio" name="severity" value="P0">
+                            <span>P0 — Critical: Hire now</span>
+                        </label>
+                        <label class="severity-radio">
+                            <input type="radio" name="severity" value="P1">
+                            <span>P1 — Let's talk</span>
+                        </label>
+                        <label class="severity-radio">
+                            <input type="radio" name="severity" value="P2">
+                            <span>P2 — Keep in touch</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="issue-desc">ISSUE DESCRIPTION:</label>
+                    <textarea class="bug-input bug-textarea" id="issue-desc" name="description" placeholder="What problem do you need solved?" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="cta-btn cta-primary">SUBMIT REPORT →</button>
+            </form>
+
+            <div id="form-success" class="form-success">
+                <p>✓ BUG REPORT FILED SUCCESSFULLY</p>
+                <p>Ticket assigned to Shreyansh Dixit. Expected response: &lt; 24 hours.</p>
+            </div>
+
+            <div class="expected-actual">
+                <div class="ea-row"><span class="ea-label">EXPECTED BEHAVIOR:</span><span class="ea-value">You reach out.</span></div>
+                <div class="ea-row"><span class="ea-label">ACTUAL BEHAVIOR:</span><span class="ea-value">You haven't yet.</span></div>
+                <div class="ea-row"><span class="ea-label">STATUS:</span><span class="ea-value">OPEN</span></div>
+                <div class="ea-row"><span class="ea-label">ASSIGNED TO:</span><span class="ea-value">Shreyansh Dixit</span></div>
+            </div>
+
+            <div class="contact-links">
+                <a class="cta-btn cta-secondary" href="mailto:shreyanshdixit6206@gmail.com">EMAIL</a>
+                <a class="cta-btn cta-secondary" href="https://linkedin.com/in/shreyansh-dixit-a70717355" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+                <a class="cta-btn cta-secondary" href="https://github.com/Shreyanshdixit6206" target="_blank" rel="noopener noreferrer">GITHUB</a>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- FOOTER -->
+        <!-- ============================================ -->
+        <footer class="site-footer">
+            <p>Built &amp; tested by Shreyansh Dixit. Zero critical defects at deployment.</p>
+            <span id="easter-egg-element" class="easter-egg" title="BUG DETECTED: Layout misalignment. Resolution: Contact Shreyansh to fix your systems.">LOREM_DEFECT</span>
+        </footer>
+
+    </div><!-- /#main-content -->
+
+</body>
+</html>
